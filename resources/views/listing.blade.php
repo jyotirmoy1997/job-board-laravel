@@ -6,15 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{$heading}}</h1>
-    @if (count($listings) > 0)
-        @foreach ($listings as $listing)
-            <h2>{{$listing['title']}}</h2>
-            <p>{{$listing['description']}}</p>
-            <p>{{$listing['salary']}}</p>
-        @endforeach
+    <h1>Listing Page</h1>
+    @if (isset($listing))
+        <h2>{{$listing['title']}}</h2>
+        <p>{{$listing['description']}}</p>
+        <p>{{$listing['salary']}}</p>
     @else
-        <h2>No Listing</h2>
+        <h2>Listing Not Found</h2>
     @endif
     
     {{-- <script type="text/javascript" src="{{asset('home.js')}}"></script> --}}
