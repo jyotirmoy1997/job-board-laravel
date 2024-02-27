@@ -16,15 +16,20 @@ use App\Models\Listing;
 */
 
 Route::get('/', function () {
-    return view('home', [
-        'heading' => 'Job Listings',
-        'listings' => Listing::all()
-    ]);
+    return view('home');
+});
+
+Route::get('/listings', function () {
+    return view('listings');
+});
+
+Route::get('/listings/{id}', function ($id) {
+    return view('listing');
 });
 
 
-Route::get('/{id}', function ($id) {
-    return view('listing', [
-        'listing' => Listing::find($id)
-    ]);
-});
+// Route::get('/{id}', function ($id) {
+//     return view('listing', [
+//         'listing' => Listing::find($id)
+//     ]);
+// });
