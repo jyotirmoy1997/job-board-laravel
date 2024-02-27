@@ -22,12 +22,14 @@
             <p>Bachelors degree in Computer Science or related field, 3+ years of software development experience</p>
             <h3>Benefits</h3>
             <p>Healthcare, 401(k) matching, flexible work hours</p>
+            <h3>Posted</h3>
+            <x-date-diff :listing="$listing" />
         </div>
     </section>
 
     <section class="job-listing-det-info-wrapper">
         <div class="job-page-det-info">
-            <div class="job-page-det-info-el"><strong>Salary:</strong><span> &#8377; 10-12 LPA</span></div>
+            <div class="job-page-det-info-el"><strong>Salary:</strong><span> &#8377; {{ $listing->salary }} LPA</span></div>
             <div class="job-page-det-info-el"><strong>Location:</strong><span> {{ $listing->location }}</span></div>
             <div class="job-page-det-info-el"><strong>Tags:</strong><span> {{ $listing->tags }}</span></div>
         </div>
