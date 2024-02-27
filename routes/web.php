@@ -20,16 +20,13 @@ Route::get('/', function () {
 });
 
 Route::get('/listings', function () {
-    return view('listings');
+    return view('listings', [
+        'listings' => Listing::all()
+    ]);
 });
 
-Route::get('/listings/{id}', function ($id) {
-    return view('listing');
+Route::get('/listings/{listing}', function (Listing $listing) {
+    return view('listing', [
+        'listing' => $listing
+    ]);
 });
-
-
-// Route::get('/{id}', function ($id) {
-//     return view('listing', [
-//         'listing' => Listing::find($id)
-//     ]);
-// });

@@ -9,15 +9,15 @@
             <img src="{{ asset('images/apple.png')}}" alt="">
         </div>
         <div>
-            <h1>Software Engineer</h1>
-            <h3>Apple Inc</h3>
+            <h1>{{ $listing->title }}</h1>
+            <h3>{{ $listing->company }}</h3>
         </div>
     </header>
 
     <section>
         <div class="job-page-det">
             <h3>Job Description</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, id quis magnam excepturi neque voluptatibus nobis totam vitae placeat nesciunt distinctio dolorem at natus quam dolorum autem facilis. Illum, eligendi?</p>
+            <p>{{ $listing->description }}</p>
             <h3>Job Requirements</h3>
             <p>Bachelors degree in Computer Science or related field, 3+ years of software development experience</p>
             <h3>Benefits</h3>
@@ -28,8 +28,8 @@
     <section class="job-listing-det-info-wrapper">
         <div class="job-page-det-info">
             <div class="job-page-det-info-el"><strong>Salary:</strong><span> &#8377; 10-12 LPA</span></div>
-            <div class="job-page-det-info-el"><strong>Location:</strong><span> Bengaluru</span></div>
-            <div class="job-page-det-info-el"><strong>Tags:</strong><span> React.js Next.js, JavaScript</span></div>
+            <div class="job-page-det-info-el"><strong>Location:</strong><span> {{ $listing->location }}</span></div>
+            <div class="job-page-det-info-el"><strong>Tags:</strong><span> {{ $listing->tags }}</span></div>
         </div>
         <div class="job-listing-update-wrapper">
             <button id="edit-listing-btn">Edit Listing</button>
