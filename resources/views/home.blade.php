@@ -74,6 +74,23 @@
         </div>
     </section>
 
+    {{-- Recent Jobs --}}
+    <div class="job-section-outer">
+        <section class="job-card-heading">
+            <h1>Recent Jobs</h1>
+            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative to</p>
+        </section>
+    
+        <x-job-listings :listings="$listings" />
+    
+        <a href="/listings" class="job-section-btn">
+            <button >
+                <span>See all Jobs</span>
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
+        </a>
+    </div>
+    
 
     <!-- Job Posting Banner -->
     <section class="job-posting-wrapper">

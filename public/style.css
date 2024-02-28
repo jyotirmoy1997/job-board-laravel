@@ -112,6 +112,7 @@ button{
     border: none;
     font-size: 15px;
     outline: none;
+    width: 300px;
 }
 
 /* .input-wrapper input:focus{
@@ -224,12 +225,23 @@ button:hover{
     background-color: #00B074;
 }
 
+.job-section-outer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
 .job-section-wrapper{
     display: flex;
     flex-direction: column;
     gap: 20px;
     color: #2B3940;
     padding: 2em 0;
+}
+
+.job-section-wrapper h1{
+    text-align: center;
+    font-size: 30px;
 }
 
 .job-section-btn{

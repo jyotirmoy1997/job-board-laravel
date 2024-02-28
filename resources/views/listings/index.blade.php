@@ -3,6 +3,7 @@
 
 @section('listings')
 
+
 <!-- Main Page -->
 <main>
 
@@ -15,14 +16,7 @@
     @include('partials/_searchBar')
     
     <!-- Recent Jobs Section -->
-    <section class="job-section-wrapper">
-
-        @foreach($listings as $listing)
-        
-        <x-listing-card :listing="$listing" />
-
-        @endforeach
-    </section>
+    <x-job-listings :listings="$listings" />
 </main>
 
 @endsection
