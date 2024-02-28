@@ -9,9 +9,11 @@ use Illuminate\Http\Request;
 class ListingController extends Controller
 {
     // Show all Listings
-    public function index(){
+    public function index(Request $request){
+        $searchString = $request->search;
+        $locString = $request->loc;
         return view('listings.index', [
-            'listings' => Listing::all()
+            'listings' => Listing::latest()->filter([$searchString, $locString])->get()
         ]);
     }
 
