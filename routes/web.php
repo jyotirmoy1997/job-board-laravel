@@ -23,5 +23,11 @@ Route::get('/', [HomeController::class, 'index']);
 // All Listings Route
 Route::get('/listings', [ListingController::class, 'index']);
 
+// Load Create Listing Form
+Route::get('/listings/create', [ListingController::class, 'create']);
+
+// Create Listing
+Route::post('/listings', [ListingController::class, 'store']);
+
 // Single Listing Route
 Route::get('/listings/{listing}', [ListingController::class, 'show']);

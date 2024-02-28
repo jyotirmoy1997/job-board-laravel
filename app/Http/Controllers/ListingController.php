@@ -23,4 +23,28 @@ class ListingController extends Controller
             'listing' => $listing
         ]);
     }
+
+    // Load Create Listing Form
+    public function create(){
+        return view('listings.create');
+    }
+
+    // Create Listing
+    public function store(Request $request){
+
+        // Validate Form
+        $formFields = $request->validate([
+            'title' => 'required',
+            'description' => ['required', 'max:50'],
+            'tags' => 'required',
+            'website' => 'required',
+            'company' => 'required',
+            'location' => 'required',
+            'email' => ['required', 'email:rfc'],
+            'salary' => 'required'
+        ]);
+
+
+        return redirect('/');
+    }
 }

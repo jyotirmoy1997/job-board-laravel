@@ -28,6 +28,7 @@
     @yield('home')
     @yield('listings')
     @yield('listing')
+    @yield('create')
 
     
     <!-- Footer -->
