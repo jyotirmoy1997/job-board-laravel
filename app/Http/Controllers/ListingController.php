@@ -32,6 +32,7 @@ class ListingController extends Controller
     // Create Listing
     public function store(Request $request){
 
+
         // Validate Form
         $formFields = $request->validate([
             'title' => 'required',
@@ -43,6 +44,13 @@ class ListingController extends Controller
             'email' => ['required', 'email:rfc'],
             'salary' => 'required'
         ]);
+
+        // Check if file was uploaded
+        if($request->hasFile('logo')){
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        }
+
+        // dd($formFields);
 
         // Creating the listing from formdata
         Listing::create($formFields);

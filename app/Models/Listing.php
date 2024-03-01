@@ -17,7 +17,8 @@ class Listing extends Model
         'company',
         'location',
         'email',
-        'salary'
+        'salary',
+        'logo'
     ];
 
     public function scopeFilter($query, $filters = []){

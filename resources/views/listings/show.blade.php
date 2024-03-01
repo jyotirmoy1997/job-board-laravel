@@ -6,7 +6,7 @@
 <main class="job-page-main">
     <header class="job-page-det-heading-wrapper">
         <div>
-            <img src="{{ asset('images/apple.png')}}" alt="">
+            <img src="{{ $listing->logo ? asset("storage/$listing->logo") : asset("images/no_image.jpg")}}" alt="">
         </div>
         <div>
             <h1>{{ $listing->title }}</h1>

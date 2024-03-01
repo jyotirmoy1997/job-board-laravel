@@ -652,6 +652,12 @@ button:hover{
     border-radius: 3px;
 }
 
+.pagination-wrapper{
+    /* background-color: #FA5F1C; */
+    width: 400px;
+    margin: 0 auto;
+}
+
 
 @media (max-width: 768px) {
     .navbar-wrapper{

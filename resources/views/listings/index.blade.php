@@ -17,6 +17,12 @@
     
     <!-- Recent Jobs Section -->
     <x-job-listings :listings="$listings" />
+
+    {{-- Pagination --}}
+    {{-- <div class="pagination-wrapper">
+        {{ $listings->links()}}
+    </div> --}}
+    
 </main>
 
 @endsection

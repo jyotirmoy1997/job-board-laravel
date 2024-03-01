@@ -5,7 +5,7 @@
     <div class="job-card-outer">
         <div class="job-card-inner">
             <div>
-                <img src="{{ asset('images/airbnb.png')}}" alt="">
+                <img src="{{ $listing->logo ? asset("storage/$listing->logo") : asset("images/no_image.jpg")}}" alt="">
             </div>
             <div class="job-card-inner-info">
                 <h4>{{ $listing->title }}</h4>
@@ -21,7 +21,7 @@
             <span>&#8377;</span><span>{{ $listing->salary }} LPA</span>
         </div>
         <div>
-            <a href="/job-details.html">
+            <a href="/listings/{{$listing->id}}">
                 View Details
             </a>
         </div>

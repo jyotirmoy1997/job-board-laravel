@@ -5,7 +5,7 @@
         <x-flash-message />
         <div class="form-wrapper">
             <h1>Create Job Listing</h1>
-            <form method="POST" action="/listings" class="form">
+            <form method="POST" action="/listings" class="form" enctype="multipart/form-data">
                 @csrf
 
                 <label for="title">Job Title</label>
@@ -61,6 +61,12 @@
                     <p class="form-err">{{$message}}</p>
                 @enderror
                 <input type="email" name="email" id="" value="{{ old('email') }}">
+
+                <label for="logo">Upload Company Logo</label>
+                @error('logo')
+                    <p class="form-err">{{$message}}</p>
+                @enderror
+                <input type="file" name="logo" id="" value="{{ old('logo') }}">
                 <button>Create Listing</button>
             </form>
             
