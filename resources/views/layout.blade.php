@@ -11,7 +11,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar-wrapper">
         <h1>
-            <a href="">WorkSpace</a>
+            <a href="/">WorkSpace</a>
         </h1>
         <div class="navbar-links">
             <div>

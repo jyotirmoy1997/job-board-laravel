@@ -23,7 +23,7 @@
                 @error('salary')
                     <p class="form-err">{{$message}}</p>
                 @enderror
-                <input type="number" name="salary" id="">
+                <input type="text" name="salary" id="">
 
 
                 <label for="tags">Tags (Comma Separated Values)</label>

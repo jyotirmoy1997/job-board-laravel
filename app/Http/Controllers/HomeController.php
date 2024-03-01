@@ -10,7 +10,7 @@ class HomeController extends Controller
     // Return Home View
     public function index(){
         return view('home', [
-            'listings' => Listing::all()
+            'listings' => Listing::latest()->get()
         ]);
     }
 }

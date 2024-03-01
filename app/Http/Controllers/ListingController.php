@@ -35,7 +35,7 @@ class ListingController extends Controller
         // Validate Form
         $formFields = $request->validate([
             'title' => 'required',
-            'description' => ['required', 'max:50'],
+            'description' => ['required', 'max:500'],
             'tags' => 'required',
             'website' => 'required',
             'company' => 'required',
@@ -44,7 +44,12 @@ class ListingController extends Controller
             'salary' => 'required'
         ]);
 
+        // Creating the listing from formdata
+        Listing::create($formFields);
 
         return redirect('/');
     }
 }
+
+
+// Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, laboriosam ab. Voluptas eos, neque aperiam dicta itaque corrupti odio voluptatum eum quaerat distinctio a quod nisi error rerum iure recusandae?
