@@ -19,7 +19,7 @@
                 </div>
             <div>
                 <a href="register.html">
-                    Register <i class="fa-solid fa-book-open-reader"></i>
+                    Register <i class="fa-solid fa-arrow-right-to-bracket"></i>
                 </a>
             </div>
         </div>
@@ -30,7 +30,7 @@
     @yield('listing')
     @yield('create')
 
-    
+    <script src="{{ asset('script.js')}}"></script>    
     <!-- Footer -->
     <footer class="footer-wrapper">
         <div class="footer">

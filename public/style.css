@@ -643,6 +643,15 @@ button:hover{
     font-size: 14px;
 }
 
+.flash-message-container p{
+    background-color: #00B074;
+    width: 200px;
+    margin: 2em auto 2em auto;
+    text-align: center;
+    padding: 0.75em;
+    border-radius: 3px;
+}
+
 
 @media (max-width: 768px) {
     .navbar-wrapper{
