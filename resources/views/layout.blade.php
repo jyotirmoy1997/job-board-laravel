@@ -39,6 +39,7 @@
     @yield('listings')
     @yield('listing')
     @yield('create')
+    @yield('edit')
 
     <script src="{{ asset('script.js')}}"></script>    
     <!-- Footer -->
