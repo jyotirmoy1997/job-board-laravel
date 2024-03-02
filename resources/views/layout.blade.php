@@ -61,6 +61,7 @@
     @yield('create')
     @yield('edit')
     @yield('register')
+    @yield('login')
 
     <script src="{{ asset('script.js')}}"></script>    
     <!-- Footer -->
