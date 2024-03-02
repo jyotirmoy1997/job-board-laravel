@@ -25,10 +25,10 @@
         </h1>
         <div class="navbar-links">
             <div>
-                <a href="login.html">Login <i class="fa-solid fa-user"></i></a>
+                <a href="/login">Login <i class="fa-solid fa-user"></i></a>
                 </div>
             <div>
-                <a href="register.html">
+                <a href="/register">
                     Register <i class="fa-solid fa-arrow-right-to-bracket"></i>
                 </a>
             </div>
@@ -40,6 +40,7 @@
     @yield('listing')
     @yield('create')
     @yield('edit')
+    @yield('register')
 
     <script src="{{ asset('script.js')}}"></script>    
     <!-- Footer -->

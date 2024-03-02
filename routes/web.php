@@ -5,6 +5,7 @@ use App\Http\Controllers\ListingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Listing;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,11 @@ Route::delete('/listings/{listing}', [ListingController::class, 'delete']);
 
 // Single Listing Route
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
+
+
+// Show Register/Create Form
+Route::get('/register', [UserController::class, 'create']);
+
+
+// Create New User
+Route::post('/users', [UserController::class, 'store']);
