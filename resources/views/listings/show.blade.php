@@ -36,19 +36,21 @@
         <div class="job-listing-update-wrapper">
 
             @auth
-            {{-- Redirect to Edit Listing Form --}}
-            <a href="/listings/{{ $listing->id }}/edit">
-                <button id="edit-listing-btn">Edit Listing</button>
-            </a>
-            
 
-            {{-- Delete Listing Form --}}
-            <form method="POST" action="/listings/{{ $listing->id }}">
-                @csrf
-                @method('DELETE')
-                <button id="delete-listing-btn">Delete Listing</button>
-            </form>
+            @if(auth()->id() == $listing->user_id)
+                {{-- Redirect to Edit Listing Form --}}
+                <a href="/listings/{{ $listing->id }}/edit">
+                    <button id="edit-listing-btn">Edit Listing</button>
+                </a>
 
+
+                {{-- Delete Listing Form --}}
+                <form method="POST" action="/listings/{{ $listing->id }}">
+                    @csrf
+                    @method('DELETE')
+                    <button id="delete-listing-btn">Delete Listing</button>
+                </form>
+            @endif
             @endauth
         </div>
         
