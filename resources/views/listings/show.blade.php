@@ -35,7 +35,13 @@
         </div>
         <div class="job-listing-update-wrapper">
             <button id="edit-listing-btn">Edit Listing</button>
-            <button id="delete-listing-btn">Delete Listing</button>
+
+            {{-- Delete Listing Form --}}
+            <form method="POST" action="/listings/{{ $listing->id }}">
+                @csrf
+                @method('DELETE')
+                <button id="delete-listing-btn">Delete Listing</button>
+            </form>
         </div>
         
     </section>
