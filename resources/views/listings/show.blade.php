@@ -34,7 +34,13 @@
             <div class="job-page-det-info-el"><strong>Tags:</strong><span> {{ $listing->tags }}</span></div>
         </div>
         <div class="job-listing-update-wrapper">
-            <button id="edit-listing-btn">Edit Listing</button>
+
+            @auth
+            {{-- Redirect to Edit Listing Form --}}
+            <a href="/listings/{{ $listing->id }}/edit">
+                <button id="edit-listing-btn">Edit Listing</button>
+            </a>
+            
 
             {{-- Delete Listing Form --}}
             <form method="POST" action="/listings/{{ $listing->id }}">
@@ -42,6 +48,8 @@
                 @method('DELETE')
                 <button id="delete-listing-btn">Delete Listing</button>
             </form>
+
+            @endauth
         </div>
         
     </section>
