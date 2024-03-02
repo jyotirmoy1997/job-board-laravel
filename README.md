@@ -14,7 +14,6 @@
 
 * **Candidate-Focused Features:** Implemented advanced search functionalities, enabling job seekers to find relevant opportunities based on criteria such as location, industry, and job type.
 
-* **User Authentication and Authorization:** Ensured secure user access by implementing Laravel's authentication system, managing user roles, and enforcing access controls for different user types.
 
 * **Database Management:** Utilized Laravel's Eloquent ORM for efficient database management, ensuring optimal performance and scalability as the application grows.
 
