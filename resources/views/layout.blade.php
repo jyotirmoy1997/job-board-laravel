@@ -24,6 +24,18 @@
             <a href="/">WorkSpace</a>
         </h1>
         <div class="navbar-links">
+
+            @auth
+            {{-- <div>
+                Welcome {{ auth()->user()->name}}
+            </div> --}}
+            <div>
+                <a href="/register">
+                    Manage Listings <i class="fa-solid fa-gear"></i>
+                </a>
+            </div>
+
+            @else
             <div>
                 <a href="/login">Login <i class="fa-solid fa-user"></i></a>
                 </div>
@@ -32,6 +44,8 @@
                     Register <i class="fa-solid fa-arrow-right-to-bracket"></i>
                 </a>
             </div>
+
+            @endauth
         </div>
     </nav>
 
