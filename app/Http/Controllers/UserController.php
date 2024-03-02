@@ -34,4 +34,19 @@ class UserController extends Controller
 
         return redirect('/');
     }
+
+    // Logout Function
+    public function logout(Request $request){
+
+        // Remove Auth Info
+        auth()->logout();
+
+        // Invalidate User Session
+        $request->session()->invalidate();
+
+        // Regenerate CSRF Token
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
 }

@@ -42,10 +42,11 @@ Route::delete('/listings/{listing}', [ListingController::class, 'delete']);
 // Single Listing Route
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
-
 // Show Register/Create Form
 Route::get('/register', [UserController::class, 'create']);
 
+// User Logout Form
+Route::post('/logout', [UserController::class, 'logout']);
 
 // Create New User
 Route::post('/users', [UserController::class, 'store']);

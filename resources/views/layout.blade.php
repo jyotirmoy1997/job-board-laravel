@@ -34,6 +34,12 @@
                     Manage Listings <i class="fa-solid fa-gear"></i>
                 </a>
             </div>
+            <div>
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button type="submit">Logout</button>
+                </form>
+            </div>
 
             @else
             <div>
